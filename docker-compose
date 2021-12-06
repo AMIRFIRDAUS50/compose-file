@@ -21,6 +21,8 @@ services:
           - storage:/var/www/html:ro
       depends_on:
           - php-fpm
+      labels:
+            kompose.service.type: LoadBalancer  
 
   php-fpm:
       #user: '1000:1000' # set to your uid:gid
